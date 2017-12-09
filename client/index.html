@@ -8,6 +8,7 @@
     <!-- dependencies -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/underscore/underscore.js"></script>
+    <script src="scripts/app.js"></script>
     <script>
       // YOU DO NOT NEED TO EDIT THIS CODE
       if (!/(&|\?)username=/.test(window.location.search)) {
@@ -20,9 +21,9 @@
       }
     </script>
     <script src="env/config.js"></script>
-    <script src="scripts/app.js"></script>
     <script>
       $(document).ready(function() {
+        console.log(typeof window.location.search);
         app.init();
       });
       </script>
@@ -31,14 +32,29 @@
   <body>
     <div id="main">
       <h1>Chatter Box</h1>
-      <h2 id ='username'></h2>
-      <form id="submit">
-  Type message here:
-  <input type="text" value="message">
-  <input type="submit" value="Send">
-</form>
+      <h2 id ='username'>username</h2>
+      
       <!-- Your HTML goes here! -->
+      <form action="/action_page.php">
+  <select name="rooms">
+    <option value="volvo">room name</option>
+    <option value="saab">Saab</option>
+    <option value="fiat">Fiat</option>
+    <option value="audi">Audi</option>
+  </select>
+  <input type="submit">
+<br><br>
+</form>
+      <input id="textbox" type="text" value="Message"></input>
+      <input class="submit" type="submit" value="Send"></input>
     </div>
     <div id="chats"></div>
   </body>
 </html>
+
+<!-- <form id="submit">
+  Type message here:
+  <input class="input" type="text" value="message"></input>
+  <input class="submit" type="submit" value="Send"></input>
+</form> <h1>Chatter Box</h1>
+
