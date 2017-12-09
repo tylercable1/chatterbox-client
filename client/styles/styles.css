@@ -94,5 +94,10 @@ form input[type=text] {
   text-align: center;
 }
 .username {
-  color : red;
+  color : blue;
+  font-size: 20px;
+}
+.text {
+  margin-bottom: 5px;
+  text-align: center;
 }
