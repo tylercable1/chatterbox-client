@@ -25,6 +25,7 @@
       $(document).ready(function() {
         console.log(typeof window.location.search);
         app.init();
+        $('#username').text(window.location.search.split('=')[1]);
       });
       </script>
     <!-- your scripts -->
@@ -32,19 +33,15 @@
   <body>
     <div id="main">
       <h1>Chatter Box</h1>
-      <h2 id ='username'>username</h2>
+      <h2 id ='username'></h2>
       
       <!-- Your HTML goes here! -->
-      <form action="/action_page.php">
-  <select name="rooms">
-    <option value="volvo">room name</option>
-    <option value="saab">Saab</option>
-    <option value="fiat">Fiat</option>
-    <option value="audi">Audi</option>
+      
+  <select name="rooms" class = 'roomList'>
+  <option name = 'ALl'>All</option>
   </select>
-  <input type="submit">
+  <input class="roomSwitch" type="submit" value="Switch Room">
 <br><br>
-</form>
       <input id="textbox" type="text" value="Message"></input>
       <input class="submit" type="submit" value="Send"></input>
     </div>
